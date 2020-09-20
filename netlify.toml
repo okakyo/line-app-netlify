@@ -1,0 +1,7 @@
+[dev]
+   command = "npm run serve"
+
+[build]
+  command = "npm run generate"
+  publish = "dist"
+  functions = "functions"
