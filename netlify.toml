@@ -2,6 +2,6 @@
    command = "npm run serve"
 
 [build]
-  command = "npm run generate"
+  command = "npm run build"
   publish = "dist"
   functions = "functions"
