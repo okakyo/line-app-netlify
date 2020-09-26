@@ -1,18 +1,18 @@
 
 
-import  express from "express";
+import  express,{Response} from "express";
 import bodyParser from "body-parser";
-import * as  serverless from "serverless";
+import serverless from "serverless-http";
 
 const app = express();
-function updateDatabase(data) {
-  ... // update the database
-  return newValue;
+function updateDatabase(data:any) {
+
+  return data;
 }
 
 app.use(bodyParser);
-app.post('/updatestate', (req, res) => {
-  const newValue = updateDatabase(res.body);
+app.post('/updatestate', (req, res:Response) => {
+  const newValue = updateDatabase(res);
   res.json(newValue);
 });
 
