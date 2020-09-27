@@ -1,7 +1,4 @@
-[dev]
-   command = "npm run serve"
-
 [build]
   command = "npm run build"
+  functions = "lambda"
   publish = "dist"
-  functions = "functions"
