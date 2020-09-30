@@ -6,7 +6,7 @@ router.get("/",(req,res)=>{
     res.json("monkey");
 });
 
-router.post("/index",(req,res) =>{
+router.get("/index",(req,res) =>{
     res.json("magic")
 });
 
