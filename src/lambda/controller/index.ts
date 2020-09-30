@@ -5,9 +5,9 @@ const router = Router();
 
 
 router.get("/",(req,res)=>{
-    res.json("unko");
+    res.json("Hello Netlify");
 })
-router.use("/sample",lineRouter);
+router.use("/line",lineRouter);
 
 
 export const baseController = router;
