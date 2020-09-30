@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve & netlify-lambda serve src/lambda ",
-    "build": "vue-cli-service build ",
-    "build:function":" netlify-lambda build src/lambda",
+    "serve": "netlify-lambda serve src/lambda & vue-cli-service serve",
+    "build": "netlify-lambda build src/lambda & vue-cli-service build ",
+    "build:function":"netlify-lambda build src/lambda",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
