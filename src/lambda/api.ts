@@ -7,9 +7,10 @@ const app = express();
 
 
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/.netlify/functions/api",baseController)
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
 export const handler = serverless(app);

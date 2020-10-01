@@ -10,6 +10,10 @@ router.get("/",(req,res)=>{
     res.json("Hello Line Bot");
 });
 
+router.get("/webhook",(req,res)=>{
+  res.json("webhook")
+})
+
 router.post('/webhook',lineMiddleware,(req, res) => {
 
     //ここのif分はdeveloper consoleの"接続確認"用なので削除して問題ないです。
