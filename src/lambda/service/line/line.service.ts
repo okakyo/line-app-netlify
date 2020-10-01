@@ -1,12 +1,7 @@
-import line from "@line/bot-sdk";
+import {lineClient} from "@/lambda/config/line.config";
 
-const config = {
-    channelSecret: 'チャンネルシークレット',
-    channelAccessToken: 'チャンネルアクセストークン'
-};
 
-const client = new line.Client(config);
-
+const client  = lineClient;
 function handleEvent(event:any) {
     if (event.type !== 'message' || event.message.type !== 'text') {
       return Promise.resolve(null);
