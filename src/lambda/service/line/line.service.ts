@@ -1,4 +1,4 @@
-import {lineClient} from "@/lambda/config/line.config";
+import {lineClient} from "../../config/line.config";
 
 
 const client  = lineClient;

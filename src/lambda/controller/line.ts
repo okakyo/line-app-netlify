@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {lineClient, lineMiddleware} from "@/lambda/config/line.config";
+import {lineClient, lineMiddleware} from "../config/line.config";
 
 
 const router = Router();
