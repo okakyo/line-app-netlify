@@ -1,7 +1,5 @@
 
 import {Client} from "@line/bot-sdk";
-import {lineClient} from "../../config/line.config";
-
 
 // handle the text message function.
 const TextHandler = (event:any) =>{
