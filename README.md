@@ -1,5 +1,7 @@
 # line-app
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/728045c9-d424-425c-808d-5c17f2ff329e/deploy-status)](https://app.netlify.com/sites/sleepy-heyrovsky-d4589b/deploys)
+
 ## Project setup
 ```
 npm install

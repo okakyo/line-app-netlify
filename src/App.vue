@@ -5,7 +5,20 @@
   </div>
   <router-view />
 </template>
+<script lang="ts">
+import { defineComponent } from "vue";
 
+// TODO: ここにProvide, Inject 情報を管理する
+
+export default defineComponent({
+  name: "TopLayout",
+  components: {},
+  setup() {
+    // ここにLIFF の認証を用意する
+    return {};
+  }
+});
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
