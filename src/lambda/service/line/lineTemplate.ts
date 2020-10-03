@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 
 // TODO: カルーセルテンプレートを設定する
-export const caroucelTemplate =(content:FlexBubble[]):FlexCarousel=>{
+export const CaroucelTemplate =(content:FlexBubble[]):FlexCarousel=>{
     return {
         type:"carousel",
         contents:content
@@ -67,6 +67,6 @@ export const ButtonTemplate = (
         imageBackgroundColor:imageBgColor,
         actions:actions
     }
-    
+
 }
 
