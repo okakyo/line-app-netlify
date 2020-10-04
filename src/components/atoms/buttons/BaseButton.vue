@@ -1,15 +1,13 @@
 <template>
   <button :class="classes" :style="style">
-    <slot/>
+    <slot />
   </button>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import {ColorType,colorPicker} from "@/components/utils/color";
-
+import { ColorType, colorPicker } from "@/components/utils/color";
 
 type ButtonProps = {
-
   large?: boolean;
   small?: boolean;
   block?: boolean;
@@ -18,31 +16,29 @@ type ButtonProps = {
   text?: boolean;
   color?: ColorType;
   style: string;
-
 };
 
 export default defineComponent({
   name: "BaseButton",
-  
-  setup(props: ButtonProps,{}) {
+
+  setup(props: ButtonProps) {
     const classes = () => {
-      
       return [
         "ma-2",
         "py-2",
         "px-4",
         "font-semibold",
         "rounded",
-        props.large?"":"",
-        props.small?"":"",
-        props.block?"":"",
-        props.rounded?"":"",
-        colorPicker(props.color,props.outlined)
+        props.large ? "" : "",
+        props.small ? "" : "",
+        props.block ? "" : "",
+        props.rounded ? "" : "",
+        colorPicker(props.color, props.outlined)
       ].join(" ");
     };
     return {
       classes
-    }
+    };
   }
 });
 </script>

@@ -1,40 +1,57 @@
-
 // 色の設定をここで実装する
 
-export type ColorType = "primary"|"info"|"success"|"warn"|"danger"|"dark";
+export type ColorType =
+  | "primary"
+  | "info"
+  | "success"
+  | "warn"
+  | "danger"
+  | "dark";
 
-export const colorPicker=(color?:ColorType,outlined?:boolean)=>{
-    let base: string;
-    let hovor: string;
-    
+export const colorPicker = (color?: ColorType, outlined?: boolean) => {
+  let base: string;
+  let hovor: string;
 
-    switch(color){
-        case "primary":
-            base =!outlined?"bg-blue-500 text-white":" border-blue-500";
-            hovor=!outlined?"hover:bg-blue-400":"hover:text-white hover:bg-blue-500";
-            
+  switch (color) {
+    case "primary":
+      base = !outlined ? "bg-blue-500 text-white" : " border-blue-500";
+      hovor = !outlined
+        ? "hover:bg-blue-400"
+        : "hover:text-white hover:bg-blue-500";
 
-        case "info":
-            base =!outlined?"bg-teal-500":"bg-transparent boder border-teal-500";
-            hovor=!outlined?"bg-teal-400":"hover:border-transparent hover:bg-teal-500";
-            
-        case "success":
-            base =!outlined?"bg-green-500":"bg-transparent boder border-green-500";
-            hovor=!outlined?"bg-green-400":"hover:border-transparent hover:bg-green-500";
-            
-        case "warn":
-            base =!outlined?"bg-orange-500":"bg-transparent boder border-orange-500";
-            hovor=!outlined?"bg-orange-400":"hover:border-transparent hover:bg-orange-500";
-            
-        
-        case "danger":
-            base =!outlined?"bg-red-500":"bg-transparent boder border-red-500";
-            hovor=!outlined?"bg-red-400":"hover:border-transparent hover:bg-red-500";
-            
-        default:
-            base =!outlined?"bg-grey-500":"bg-transparent boder border-grey-500";
-            hovor=!outlined?"bg-grey-400":"hover:border-transparent hover:bg-grey-500";
-            
-    }
-    return [base,hovor].join(",")
-}
+    case "info":
+      base = !outlined ? "bg-teal-500" : "bg-transparent boder border-teal-500";
+      hovor = !outlined
+        ? "bg-teal-400"
+        : "hover:border-transparent hover:bg-teal-500";
+
+    case "success":
+      base = !outlined
+        ? "bg-green-500"
+        : "bg-transparent boder border-green-500";
+      hovor = !outlined
+        ? "bg-green-400"
+        : "hover:border-transparent hover:bg-green-500";
+
+    case "warn":
+      base = !outlined
+        ? "bg-orange-500"
+        : "bg-transparent boder border-orange-500";
+      hovor = !outlined
+        ? "bg-orange-400"
+        : "hover:border-transparent hover:bg-orange-500";
+
+    case "danger":
+      base = !outlined ? "bg-red-500" : "bg-transparent boder border-red-500";
+      hovor = !outlined
+        ? "bg-red-400"
+        : "hover:border-transparent hover:bg-red-500";
+
+    default:
+      base = !outlined ? "bg-grey-500" : "bg-transparent boder border-grey-500";
+      hovor = !outlined
+        ? "bg-grey-400"
+        : "hover:border-transparent hover:bg-grey-500";
+  }
+  return [base, hovor].join(",");
+};
