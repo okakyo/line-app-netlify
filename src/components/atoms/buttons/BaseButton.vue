@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :style="style">
+  <button :class="classes()" :style="style">
     <slot />
   </button>
 </template>
@@ -15,13 +15,47 @@ type ButtonProps = {
   outlined?: boolean;
   text?: boolean;
   color?: ColorType;
-  style: string;
+  style?: string;
 };
 
 export default defineComponent({
   name: "BaseButton",
+  props:{
+    large: {
+      type:Boolean,
+      require: false 
+    },
 
-  setup(props: ButtonProps) {
+    small:{
+      type:Boolean,
+      require: false 
+    },
+    block:{
+      type:Boolean,
+      require: false 
+    },
+    rounded:{
+      type:Boolean,
+      require: false 
+    },
+    outlined:{
+      type:Boolean,
+      require: false 
+    },
+    text:{
+      type:Boolean,
+      require: false 
+    },
+    color:{
+      type: String,
+      require: false 
+    },
+    style:{
+      type:Boolean,
+      require: false 
+    },
+  },
+  setup(props) {
     const classes = () => {
       return [
         "ma-2",
